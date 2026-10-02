@@ -1,4 +1,4 @@
-name: Build Android APK
+unzip -q "DikouratSbagha_Icon_Fixed_READY.zip" -d projectname: Build Android APK
 
 on:
   workflow_dispatch:
