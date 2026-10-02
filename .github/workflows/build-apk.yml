@@ -3,7 +3,8 @@ name: Build Android APK
 on:
   workflow_dispatch:
   push:
-    branches: [ main ]
+    branches:
+      - main
 
 jobs:
   build:
@@ -15,7 +16,7 @@ jobs:
 
       - name: Extract Android project
         run: |
-                    unzip -q "DikouratSbagha_Icon_Fixed_READY.zip" -d project
+          unzip -q "DikouratSbagha_Icon_Fixed_READY.zip" -d project
           PROJECT_DIR="$(dirname "$(find project -name settings.gradle -print -quit)")"
           echo "PROJECT_DIR=$PROJECT_DIR" >> "$GITHUB_ENV"
 
