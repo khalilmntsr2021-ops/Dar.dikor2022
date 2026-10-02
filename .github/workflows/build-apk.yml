@@ -1,4 +1,4 @@
-unzip -q "DikouratSbagha_Icon_Fixed_READY.zip" -d projectname: Build Android APK
+ Build Android APK
 
 on:
   workflow_dispatch:
@@ -15,7 +15,7 @@ jobs:
 
       - name: Extract Android project
         run: |
-          unzip -q "DikouratSbagha_GitHub_APK_Ready.zip" -d project
+                    unzip -q "DikouratSbagha_Icon_Fixed_READY.zip" -d project
           PROJECT_DIR="$(dirname "$(find project -name settings.gradle -print -quit)")"
           echo "PROJECT_DIR=$PROJECT_DIR" >> "$GITHUB_ENV"
 
