@@ -16,7 +16,7 @@ jobs:
 
       - name: Extract Android project
         run: |
-          unzip -q "DikouratSbagha_DECOR_SMALL.zip" -d project
+          unzip -q "DikouratSbagha_DECOR_SMALL_FIXED.zip" -d project
           PROJECT_DIR="$(dirname "$(find project -name settings.gradle -print -quit)")"
           echo "PROJECT_DIR=$PROJECT_DIR" >> "$GITHUB_ENV"
 
@@ -34,7 +34,7 @@ jobs:
       - name: Build APK
         run: |
           cd "$PROJECT_DIR"
-          gradle assembleDebug --stacktrace
+          gradle clean assembleDebug --stacktrace
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
