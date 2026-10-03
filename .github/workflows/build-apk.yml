@@ -16,7 +16,7 @@ jobs:
 
       - name: Extract Android project
         run: |
-          unzip -q "DikouratSbagha_Icon_Fixed_READY.zip" -d project
+          DikouratSbagha_DECOR_SMALL.zip
           PROJECT_DIR="$(dirname "$(find project -name settings.gradle -print -quit)")"
           echo "PROJECT_DIR=$PROJECT_DIR" >> "$GITHUB_ENV"
 
