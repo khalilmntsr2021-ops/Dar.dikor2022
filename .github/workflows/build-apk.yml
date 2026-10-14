@@ -9,6 +9,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -16,7 +17,7 @@ jobs:
       - name: Extract Android project
         run: |
           mkdir -p project
-          unzip -q "Dar-dikor-2022-Firebase-READY.zip" -d project
+          unzip -q "Dar-dikor-2022-ADD-BUTTON-RESPONSE-FIX.zip" -d project
           test -f project/settings.gradle
           test -f project/app/build.gradle
 
